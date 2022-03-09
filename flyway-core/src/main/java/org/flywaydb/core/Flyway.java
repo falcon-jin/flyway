@@ -25,16 +25,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * This is the centre point of Flyway, and for most users, the only class they will ever have to deal with.
+ * 这是 Flyway 的中心点，对于大多数用户来说，这是他们唯一需要处理的课程。
  *
- * It is THE public API from which all important Flyway functions such as clean, validate and migrate can be called.
+ * 它是公共 API，可以从中调用所有重要的 Flyway 功能，例如 clean、validate 和 migrate。
  *
- * To get started all you need to do is create a configured Flyway object and then invoke its principal methods.
+ * 要开始，您需要做的就是创建一个已配置的 Flyway 对象，然后调用其主体方法。
  * <pre>
  * Flyway flyway = Flyway.configure().dataSource(url, user, password).load();
  * flyway.migrate();
  * </pre>
- * Note that a configured Flyway object is immutable. If you change the configuration you will end up creating a new Flyway object.
+ * 请注意，配置的 Flyway 对象是不可变的。如果您更改配置，您最终将创建一个新的 Flyway 对象。
  */
 @CustomLog
 @ExtensionMethod(FlywayTeamsObjectResolver.class)
@@ -43,13 +43,12 @@ public class Flyway {
     private final FlywayExecutor flywayExecutor;
 
     /**
-     * This is your starting point. This creates a configuration which can be customized to your needs before being
-     * loaded into a new Flyway instance using the load() method.
+     * 这是你的起点。这将创建一个配置，可以在使用 load() 方法将其加载到新的 Flyway 实例之前根据您的需要进行自定义。
      *
-     * In its simplest form, this is how you configure Flyway with all defaults to get started:
+     *在最简单的形式中，这是您使用所有默认值配置 Flyway 以开始使用的方式：
      * <pre>Flyway flyway = Flyway.configure().dataSource(url, user, password).load();</pre>
      *
-     * After that you have a fully-configured Flyway instance at your disposal which can be used to invoke Flyway
+     * 之后，您将拥有一个完全配置的 Flyway 实例，可用于调用 Flyway
      * functionality such as migrate() or clean().
      *
      * @return A new configuration from which Flyway can be loaded.
@@ -59,10 +58,9 @@ public class Flyway {
     }
 
     /**
-     * This is your starting point. This creates a configuration which can be customized to your needs before being
-     * loaded into a new Flyway instance using the load() method.
+     * 这是你的起点。这将创建一个配置，可以在使用 load() 方法将其加载到新的 Flyway 实例之前根据您的需要进行自定义。
      *
-     * In its simplest form, this is how you configure Flyway with all defaults to get started:
+     * 在最简单的形式中，这是您使用所有默认值配置 Flyway 以开始使用的方式：
      * <pre>Flyway flyway = Flyway.configure().dataSource(url, user, password).load();</pre>
      *
      * After that you have a fully-configured Flyway instance at your disposal which can be used to invoke Flyway
